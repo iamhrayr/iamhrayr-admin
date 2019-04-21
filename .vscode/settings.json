@@ -1,0 +1,8 @@
+{
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "flow.pathToFlow": "./node_modules/.bin/flow",
+    "javascript.validate.enable": false
+}

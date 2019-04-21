@@ -6,7 +6,9 @@
     "author": "iamhrayr",
     "license": "MIT",
     "scripts": {
-        "start": "webpack-dev-server --mode development --open --hot"
+        "start": "webpack-dev-server --mode development --open --hot",
+        "build": "babel src/ -d lib/",
+        "prepublish": "yarn run build"
     },
     "dependencies": {
         "antd": "^3.16.1",
@@ -22,11 +24,13 @@
         "regenerator-runtime": "^0.13.2"
     },
     "devDependencies": {
+        "@babel/cli": "^7.4.3",
         "@babel/core": "^7.1.5",
         "@babel/plugin-proposal-class-properties": "^7.1.0",
         "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
         "@babel/plugin-transform-arrow-functions": "^7.0.0",
         "@babel/preset-env": "^7.1.5",
+        "@babel/preset-flow": "^7.0.0",
         "@babel/preset-react": "^7.0.0",
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.4",
@@ -42,6 +46,7 @@
         "eslint-plugin-prettier": "^3.0.1",
         "eslint-plugin-react": "^7.12.4",
         "file-loader": "^2.0.0",
+        "flow-bin": "^0.97.0",
         "html-webpack-plugin": "^3.2.0",
         "node-sass": "^4.11.0",
         "prettier": "^1.16.4",
