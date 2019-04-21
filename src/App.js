@@ -9,6 +9,9 @@ import React from "react";
 
 export default () => {
     const a: number = 18;
-
+    const a1 = {
+        a: 1,
+        b: 2
+    };
     return <div>Test app</div>;
 };

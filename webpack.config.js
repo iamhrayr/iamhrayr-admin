@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const InterpolateHtmlPlugin = require("interpolate-html-plugin");
+const FlowBabelWebpackPlugin = require("flow-babel-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -31,8 +33,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new FlowBabelWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: "./public/index.html"
+        }),
+        new InterpolateHtmlPlugin({
+            NODE_ENV: "development"
         })
     ],
     resolve: {
