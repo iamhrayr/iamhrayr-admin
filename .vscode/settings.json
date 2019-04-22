@@ -4,5 +4,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "flow.pathToFlow": "./node_modules/.bin/flow",
+    "flow.enabled": true,
+    "flow.useNPMPackagedFlow": true,
     "javascript.validate.enable": false
 }
