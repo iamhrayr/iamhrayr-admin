@@ -23,6 +23,10 @@ export default {
         "react/forbid-prop-types": 0,
         "import/order": 0,
         "import/prefer-default-export": 0,
+        "no-unused-vars": [
+            "error",
+            { vars: "all", args: "after-used", ignoreRestSiblings: false }
+        ],
         "max-len": ["error", { code: 100, ignoreUrls: true }],
         "prettier/prettier": [
             "error",
