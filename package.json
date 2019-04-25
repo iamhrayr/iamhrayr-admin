@@ -26,7 +26,8 @@
         "react-youtube": "^7.9.0",
         "redux": "^4.0.1",
         "redux-saga": "^1.0.2",
-        "regenerator-runtime": "^0.13.2"
+        "regenerator-runtime": "^0.13.2",
+        "styled-components": "^4.2.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.4.3",

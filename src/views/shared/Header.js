@@ -6,11 +6,11 @@ export default () => {
 
     return (
         <Layout.Header style={{ background: "#fff", padding: 0 }}>
-            <Icon
+            {/* <Icon
                 className="trigger"
                 type={collapsed ? "menu-unfold" : "menu-fold"}
                 // onClick={this.toggle}
-            />
+            /> */}
         </Layout.Header>
     );
 };
