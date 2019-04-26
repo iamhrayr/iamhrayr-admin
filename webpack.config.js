@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InterpolateHtmlPlugin = require("interpolate-html-plugin");
-const FlowBabelWebpackPlugin = require("flow-babel-webpack-plugin");
+// const FlowBabelWebpackPlugin = require("flow-babel-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -36,7 +36,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new FlowBabelWebpackPlugin(),
+        // new FlowBabelWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: "./public/index.html"
         }),
@@ -45,10 +45,10 @@ module.exports = {
         })
     ],
     resolve: {
-        alias: {
-            Components: path.resolve(__dirname, "./src/components/"),
-            Store: path.resolve(__dirname, "./src/store/"),
-            Api: path.resolve(__dirname, "./src/api/")
-        }
+        // aliases transfered to .babelrc
+        // alias: {
+        //     Components: path.resolve(__dirname, "./src/components/"),
+        //     Graphql: path.resolve(__dirname, "./src/graphql/")
+        // }
     }
 };

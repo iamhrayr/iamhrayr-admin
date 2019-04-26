@@ -1,0 +1,8 @@
+mutation editSkill($id: ID!, $name: String, $percent: Int, $color: String) {
+    editSkill(id: $id, name: $name, percent: $percent, color: $color) {
+        id
+        name
+        percent
+        color
+    }
+}

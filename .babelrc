@@ -1,10 +1,25 @@
 {
-    "presets": ["@babel/flow", "@babel/preset-env", "@babel/preset-react"],
+    "presets": [
+        // "@babel/flow",
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
     "plugins": [
-        "transform-flow-comments",
+        "import-graphql",
+        // "transform-flow-comments",
         "jsx-control-statements",
         "@babel/plugin-transform-arrow-functions",
-        "@babel/plugin-syntax-object-rest-spread",
-        "@babel/plugin-proposal-class-properties"
+        "@babel/plugin-syntax-object-rest-spread"
+        // "@babel/plugin-proposal-class-properties",
+        // [
+        //     "module-resolver",
+        //     {
+        //         "root": ["./src"],
+        //         "alias": {
+        //             "Components": "./src/components",
+        //             "Graphql": "./src/graphql"
+        //         }
+        //     }
+        // ]
     ]
 }

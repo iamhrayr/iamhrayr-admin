@@ -1,0 +1,8 @@
+query {
+    skills {
+        id
+        name
+        percent
+        color
+    }
+}

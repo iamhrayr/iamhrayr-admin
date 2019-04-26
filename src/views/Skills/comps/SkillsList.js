@@ -5,19 +5,17 @@ import { Button, List } from "antd";
 import SkillItem from "./SkillItem";
 
 // export default ({ move, swap, push, insert, form }) => (
-export default props => (
+export default ({ skills }) => (
     <>
         <List
             bordered={false}
-            dataSource={props.form.values.skills}
-            renderItem={(item, index) => (
-                <SkillItem index={index} item={item} {...props} />
-            )}
+            dataSource={skills}
+            renderItem={(item, index) => <SkillItem skillData={item} />}
         />
         <Button
             type="primary"
             icon="plus-circle"
-            onClick={() => props.push({ name: "", percent: "", color: "red" })}
+            // onClick={() => props.push({ name: "", percent: "", color: "red" })}
         >
             Add new Skill
         </Button>
