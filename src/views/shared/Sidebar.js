@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router";
 
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 
-export default function Sidebar() {
+const Sidebar = ({ history }) => {
     const [collabsed, setCollabsed] = useState(false);
 
     return (
@@ -11,27 +12,35 @@ export default function Sidebar() {
             collapsed={collabsed}
             onCollapse={setCollabsed}
         >
-            {/* <div style={{ paddingVertical: 20, color: "#fff" }}>
-                Iamhrayr | admin
-            </div> */}
-            <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-                <Menu.Item key="1">
+            <Menu
+                theme="dark"
+                defaultSelectedKeys={["1"]}
+                mode="inline"
+                onClick={({ item }) => history.push(item.props.path)}
+            >
+                <Menu.Item path="/">
                     <Icon type="home" />
                     <span>Home</span>
                 </Menu.Item>
-                <Menu.Item key="2">
+                <Menu.Item path="/skills">
                     <Icon type="thunderbolt" />
                     <span>Skills</span>
                 </Menu.Item>
-                <Menu.Item key="3">
+                <Menu.Item path="/works">
+                    <Icon type="folder-open" />
+                    <span>Works</span>
+                </Menu.Item>
+                <Menu.Item path="/about">
                     <Icon type="info-circle" />
                     <span>About</span>
                 </Menu.Item>
-                <Menu.Item key="4">
+                <Menu.Item path="/contact">
                     <Icon type="mail" />
                     <span>Contact</span>
                 </Menu.Item>
             </Menu>
         </Layout.Sider>
     );
-}
+};
+
+export default withRouter(Sidebar);

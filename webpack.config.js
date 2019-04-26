@@ -9,7 +9,7 @@ module.exports = {
         path: path.join(__dirname, "/build"),
         filename: "bundle.js"
     },
-    devtool: "source-map",
+    // devtool: "source-map",
     devServer: {
         historyApiFallback: true
     },

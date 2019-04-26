@@ -1,0 +1,14 @@
+mutation publishWork($id: ID!) {
+    publishWork(id: $id) {
+        id
+        title
+        description
+        thumbnail
+        tags
+        published
+        category {
+            id
+            name
+        }
+    }
+}

@@ -1,0 +1,14 @@
+query {
+    works {
+        id
+        title
+        description
+        thumbnail
+        tags
+        published
+        category {
+            id
+            name
+        }
+    }
+}
