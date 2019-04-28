@@ -1,0 +1,14 @@
+mutation addWork($input: addWorkInput!) {
+  addWork(input: $input) {
+    id
+    # title
+    # description
+    # thumbnail
+    # tags
+    # published
+    # category {
+    #   id
+    #   name
+    # }
+  }
+}

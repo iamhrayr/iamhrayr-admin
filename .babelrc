@@ -9,7 +9,8 @@
         // "transform-flow-comments",
         "jsx-control-statements",
         "@babel/plugin-transform-arrow-functions",
-        "@babel/plugin-syntax-object-rest-spread"
+        "@babel/plugin-syntax-object-rest-spread",
+        "@babel/plugin-proposal-class-properties"
         // "@babel/plugin-proposal-class-properties",
         // [
         //     "module-resolver",
