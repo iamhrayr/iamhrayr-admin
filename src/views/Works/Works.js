@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // queries
 import WORKS_QUERY from "../../graphql/queries/works.gql";
 
-import columns from "./table-columns";
+import getColumns from "./table-columns";
 
 export default class Works extends React.PureComponent {
   render() {
@@ -32,7 +32,7 @@ export default class Works extends React.PureComponent {
               <Table
                 loading={loading}
                 rowKey={row => row.id}
-                columns={columns}
+                columns={getColumns(this.props)}
                 dataSource={data.works}
               />
             );

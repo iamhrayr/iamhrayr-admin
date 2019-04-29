@@ -11,7 +11,7 @@ import history from "./history";
 import Home from "./views/Home";
 import Skills from "./views/Skills";
 import Works from "./views/Works";
-import NewWork from "./views/NewWork";
+import NewWork from "./views/Works/NewWork";
 
 export default () => {
   // const a: number = 18;
@@ -36,6 +36,7 @@ export default () => {
               <Route path="/" exact component={Home} />
               <Route path="/skills" component={Skills} />
               <Route path="/works" exact component={Works} />
+              {/* <Route path="/works/:id" exact component={NewWork} /> */}
               <Route path="/works/new-work" component={NewWork} />
             </>
           </Layout.Content>

@@ -10,8 +10,8 @@ import Images from "./Images";
 import EditableTagList from "./EditableTagList";
 
 // queries & mutations
-import CATEGORIES_QUERY from "../../graphql/queries/categories.gql";
-import ADD_WORK from "../../graphql/mutations/addWork.gql";
+import CATEGORIES_QUERY from "../../../graphql/queries/categories.gql";
+import ADD_WORK from "../../../graphql/mutations/addWork.gql";
 
 import formSchema from "./formSchema";
 
