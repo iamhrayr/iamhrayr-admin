@@ -4,11 +4,11 @@ import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
 
 // queries
-import WORKS_QUERY from "../../graphql/queries/works.gql";
+import WORKS_QUERY from "../../../graphql/queries/works.gql";
 
 import getColumns from "./table-columns";
 
-export default class Works extends React.PureComponent {
+export default class WorkList extends React.PureComponent {
   render() {
     return (
       <>

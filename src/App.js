@@ -10,8 +10,9 @@ import history from "./history";
 // pages
 import Home from "./views/Home";
 import Skills from "./views/Skills";
-import Works from "./views/Works";
-import NewWork from "./views/Works/NewWork";
+import WorkList from "./views/Work/List";
+import NewWork from "./views/Work/New";
+import EditWork from "./views/Work/Edit";
 
 export default () => {
   // const a: number = 18;
@@ -35,8 +36,8 @@ export default () => {
             <>
               <Route path="/" exact component={Home} />
               <Route path="/skills" component={Skills} />
-              <Route path="/works" exact component={Works} />
-              {/* <Route path="/works/:id" exact component={NewWork} /> */}
+              <Route path="/works" exact component={WorkList} />
+              <Route path="/works/:id" component={EditWork} />
               <Route path="/works/new-work" component={NewWork} />
             </>
           </Layout.Content>

@@ -3,7 +3,7 @@ import Dropzone, { useDropzone } from "react-dropzone";
 import { notification, Button } from "antd";
 import styled from "styled-components";
 
-import DropArea from "../../../components/DropArea";
+import DropArea from "Components/DropArea";
 
 const Thumbnail = styled.div`
   width: 100px;

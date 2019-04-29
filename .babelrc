@@ -1,26 +1,26 @@
 {
-    "presets": [
-        // "@babel/flow",
-        "@babel/preset-env",
-        "@babel/preset-react"
-    ],
-    "plugins": [
-        "import-graphql",
-        // "transform-flow-comments",
-        "jsx-control-statements",
-        "@babel/plugin-transform-arrow-functions",
-        "@babel/plugin-syntax-object-rest-spread",
-        "@babel/plugin-proposal-class-properties"
-        // "@babel/plugin-proposal-class-properties",
-        // [
-        //     "module-resolver",
-        //     {
-        //         "root": ["./src"],
-        //         "alias": {
-        //             "Components": "./src/components",
-        //             "Graphql": "./src/graphql"
-        //         }
-        //     }
-        // ]
-    ]
+  "presets": [
+    // "@babel/flow",
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    // "import-graphql", // transfered to webpack
+    // "transform-flow-comments",
+    "jsx-control-statements",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-syntax-object-rest-spread",
+    "@babel/plugin-proposal-class-properties"
+    // aliases transfered to webpack
+    // [
+    //   "module-resolver",
+    //   {
+    //     "root": ["./src"],
+    //     "alias": {
+    //       "Components": "./src/components",
+    //       "Graphql": "./src/graphql"
+    //     }
+    //   }
+    // ]
+  ]
 }

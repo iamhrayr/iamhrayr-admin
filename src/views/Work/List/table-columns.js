@@ -4,8 +4,8 @@ import { Link, Redirect } from "react-router-dom";
 import { Mutation } from "react-apollo";
 
 // mutations
-import SET_WORK_VISIBILITY from "../../graphql/mutations/setWorkVisibility.gql";
-import DELETE_WORK from "../../graphql/mutations/deleteWork.gql";
+import SET_WORK_VISIBILITY from "../../../graphql/mutations/setWorkVisibility.gql";
+import DELETE_WORK from "../../../graphql/mutations/deleteWork.gql";
 
 export default props => [
   {

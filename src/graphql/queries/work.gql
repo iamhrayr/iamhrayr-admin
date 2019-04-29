@@ -1,0 +1,14 @@
+query work($id: ID!) {
+  work(id: $id) {
+    id
+    title
+    description
+    thumbnail
+    images
+    tags
+    category {
+      id
+      name
+    }
+  }
+}
