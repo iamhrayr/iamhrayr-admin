@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Query, Mutation } from "react-apollo";
 
 // queries & mutations
-import ADD_WORK from "Graphql/mutations/addWork.gql";
+import ADD_WORK from "Graphql/work/addWork.gql";
 
 import Form from "../shared/Form";
 

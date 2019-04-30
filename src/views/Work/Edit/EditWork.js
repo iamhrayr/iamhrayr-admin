@@ -3,8 +3,8 @@ import { Query, Mutation } from "react-apollo";
 import { withRouter } from "react-router";
 
 // queries & mutations
-import EDIT_WORK from "Graphql/mutations/editWork.gql";
-import WORK_QUERY from "Graphql/queries/work.gql";
+import EDIT_WORK from "Graphql/work/editWork.gql";
+import WORK_QUERY from "Graphql/work/workQuery.gql";
 
 import Form from "../shared/Form";
 
@@ -19,7 +19,7 @@ export default ({ match }) => {
             <Form
               onSubmut={addWork}
               onSubmitLoading={addWorkLoading}
-              data={data.work}
+              data={data && data.work}
               dataLoading={dataLoading}
               dataLoadingError={error}
             />

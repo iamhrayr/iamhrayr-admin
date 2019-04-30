@@ -54,7 +54,9 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, "./src/components"),
       Graphql: path.resolve(__dirname, "./src/graphql"),
-      Views: path.resolve(__dirname, "./src/views")
+      Views: path.resolve(__dirname, "./src/views"),
+      Utils: path.resolve(__dirname, "./src/utils"),
+      Configs: path.resolve(__dirname, "./src/configs")
     },
     extensions: [".mjs", ".js", ".jsx", ".json", ".gql"]
   }

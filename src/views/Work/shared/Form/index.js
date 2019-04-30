@@ -10,12 +10,12 @@ import Images from "./Images";
 import EditableTagList from "./EditableTagList";
 
 // queries & mutations
-import CATEGORIES_QUERY from "Graphql/queries/categories.gql";
+import CATEGORIES_QUERY from "Graphql/category/categoriesQuery.gql";
 // import ADD_WORK from "Graphql/mutations/addWork.gql";
 
 import formSchema from "./formSchema";
 
-export default ({
+const AddEditWorkForm = ({
   onSubmit,
   onSubmitLoading,
   data,
@@ -156,3 +156,5 @@ export default ({
       )}
     />
   );
+
+export default AddEditWorkForm;

@@ -1,4 +1,4 @@
-import "./ReactotronConfig";
+import "./configs/ReactotronConfig";
 import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloClient } from "apollo-client";
@@ -9,7 +9,7 @@ import { ApolloLink } from "apollo-link";
 
 import "antd/dist/antd.css";
 
-import App from "./App";
+import App from "./components/App";
 
 const client = new ApolloClient({
   link: ApolloLink.from([

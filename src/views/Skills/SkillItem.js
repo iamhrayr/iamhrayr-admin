@@ -8,10 +8,10 @@ import styled from "styled-components";
 import { Mutation } from "react-apollo";
 
 // queries
-import editSkillMutation from "../../../graphql/mutations/editSkill.gql";
+import editSkillMutation from "Graphql/skill/editSkill.gql";
 
 // styles
-import "../styles/skills.scss";
+import "./skills.scss";
 
 // styled components
 const ColoredDiv = styled.div`

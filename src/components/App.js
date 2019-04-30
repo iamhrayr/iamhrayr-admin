@@ -2,17 +2,17 @@ import React from "react";
 import { Router, Route } from "react-router";
 import { Layout, Breadcrumb } from "antd";
 
-import Header from "./views/shared/Header";
-import Sidebar from "./views/shared/Sidebar";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
-import history from "./history";
+import history from "Utils/history";
 
 // pages
-import Home from "./views/Home";
-import Skills from "./views/Skills";
-import WorkList from "./views/Work/List";
-import NewWork from "./views/Work/New";
-import EditWork from "./views/Work/Edit";
+import Home from "Views/Home";
+import Skills from "Views/Skills";
+import WorkList from "Views/Work/List";
+import NewWork from "Views/Work/New";
+import EditWork from "Views/Work/Edit";
 
 export default () => {
   // const a: number = 18;

@@ -4,7 +4,7 @@ import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
 
 // queries
-import WORKS_QUERY from "../../../graphql/queries/works.gql";
+import WORKS_QUERY from "Graphql/work/worksQuery.gql";
 
 import getColumns from "./table-columns";
 
