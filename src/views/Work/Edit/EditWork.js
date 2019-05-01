@@ -15,10 +15,10 @@ export default ({ match }) => {
     <Query query={WORK_QUERY} variables={{ id }}>
       {({ data, loading: dataLoading, error }) => (
         <Mutation mutation={EDIT_WORK}>
-          {(addWork, { loading: addWorkLoading }) => (
+          {(editWork, { loading: editWorkLoading }) => (
             <Form
-              onSubmut={addWork}
-              onSubmitLoading={addWorkLoading}
+              onSubmit={editWork}
+              onSubmitLoading={editWorkLoading}
               data={data && data.work}
               dataLoading={dataLoading}
               dataLoadingError={error}

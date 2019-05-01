@@ -1,5 +1,5 @@
-mutation addWork($id: ID!, $input: addWorkInput!) {
-  addWork(id: $id, input: $input) {
+mutation editWork($id: ID!, $input: addWorkInput!) {
+  editWork(id: $id, input: $input) {
     id
   }
 }

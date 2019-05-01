@@ -11,12 +11,9 @@ export default yup.object().shape({
     .required(),
   thumbnail: yup
     .mixed()
-    .required("Thumbnail is required")
-    .test(value => value.type && value.name),
-  images: yup
-    .array()
-    .of(yup.mixed().test(value => value.type && value.name))
-    .required(),
+    .required("Thumbnail is not provided or in wrong format")
+    .test(value => (value.type && value.name) || value.url),
+  images: yup.array().required(),
   tags: yup
     .array()
     .of(yup.string())

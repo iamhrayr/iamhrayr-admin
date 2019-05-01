@@ -9,7 +9,7 @@ import Form from "../shared/Form";
 export default () => (
   <Mutation mutation={ADD_WORK}>
     {(addWork, { loading }) => (
-      <Form onSubmut={addWork} onSubmitLoading={loading} />
+      <Form onSubmit={addWork} onSubmitLoading={loading} />
     )}
   </Mutation>
 );

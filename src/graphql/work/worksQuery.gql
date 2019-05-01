@@ -1,14 +1,17 @@
 query {
-    works {
-        id
-        title
-        description
-        thumbnail
-        tags
-        published
-        category {
-            id
-            name
-        }
+  works {
+    id
+    title
+    description
+    thumbnail {
+      url
+      key
     }
+    tags
+    published
+    category {
+      id
+      name
+    }
+  }
 }

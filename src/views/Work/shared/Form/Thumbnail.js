@@ -21,7 +21,7 @@ const WrapperDiv = styled.div`
 
 export default class Thumbnail extends React.Component {
   state = {
-    imageUrl: ""
+    imageUrl: this.props.src || ""
   };
 
   render() {

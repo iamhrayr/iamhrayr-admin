@@ -3,8 +3,14 @@ query work($id: ID!) {
     id
     title
     description
-    thumbnail
-    images
+    thumbnail {
+      url
+      key
+    }
+    images {
+      url
+      key
+    }
     tags
     category {
       id

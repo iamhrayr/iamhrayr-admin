@@ -13,7 +13,9 @@ export default props => [
     dataIndex: "thumbnail",
     key: "thumbnail",
     width: 80,
-    render: src => <Avatar shape="square" size="large" src={src} />
+    render: thumbnail => (
+      <Avatar shape="square" size="large" src={thumbnail.url} />
+    )
   },
   {
     title: "Title",
@@ -77,7 +79,7 @@ export default props => [
             type="primary"
             shape="circle"
             icon="edit"
-            onClick={() => props.history.push(`/works/${row.id}`)}
+            onClick={() => props.history.push(`/works/edit/${row.id}`)}
           />{" "}
           <Mutation mutation={DELETE_WORK} variables={{ id: row.id }}>
             {(deleteWork, { loading }) => (

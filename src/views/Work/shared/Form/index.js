@@ -34,7 +34,7 @@ const AddEditWorkForm = ({
       }}
       validationSchema={formSchema}
       onSubmit={(values, actions) => {
-        onSubmit({ variables: { input: values } });
+        onSubmit({ variables: { id: data && data.id, input: values } });
       }}
       render={({
         handleChange,
@@ -84,6 +84,7 @@ const AddEditWorkForm = ({
                 help={touched.thumbnail && errors.thumbnail}
               >
                 <Thumbnail
+                  src={values.thumbnail.url}
                   onAddImage={image => {
                     setFieldValue("thumbnail", image);
                   }}
@@ -96,16 +97,7 @@ const AddEditWorkForm = ({
             validateStatus={touched.images && errors.images && "error"}
             help={touched.images && errors.images}
           >
-            <Images
-              onAdd={images => {
-                setFieldValue("images", images);
-              }}
-              onRemove={index => {
-                const images = values.images.filter((img, i) => i !== index);
-                setFieldValue("images", images);
-              }}
-              images={values.images}
-            />
+            <Images setFieldValue={setFieldValue} images={values.images} />
           </Form.Item>
 
           <Form.Item

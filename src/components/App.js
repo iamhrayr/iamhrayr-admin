@@ -37,7 +37,7 @@ export default () => {
               <Route path="/" exact component={Home} />
               <Route path="/skills" component={Skills} />
               <Route path="/works" exact component={WorkList} />
-              <Route path="/works/:id" component={EditWork} />
+              <Route path="/works/edit/:id" component={EditWork} />
               <Route path="/works/new-work" component={NewWork} />
             </>
           </Layout.Content>

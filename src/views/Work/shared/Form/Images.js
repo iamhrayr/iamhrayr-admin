@@ -37,7 +37,7 @@ const ALLOWED_FILE_SIZE = 2 * 1024 * 1024;
 
 export default class Images extends React.Component {
   state = {
-    images: []
+    imgPreviews: this.props.images
   };
 
   render() {
@@ -57,9 +57,9 @@ export default class Images extends React.Component {
           )}
         </Dropzone>
         <div style={{ marginTop: 10 }}>
-          {this.state.images.map((image, index) => (
+          {this.state.imgPreviews.map((image, index) => (
             <Thumbnail key={index}>
-              <img src={image} />
+              <img src={image.url} />
               <Button
                 type="danger"
                 shape="circle"
@@ -75,14 +75,14 @@ export default class Images extends React.Component {
 
   _onDrop = (acceptedFiles, rejectedFiles) => {
     if (acceptedFiles.length > 0) {
-      this.props.onAdd(acceptedFiles);
+      this.props.setFieldValue("images", acceptedFiles);
     }
 
     acceptedFiles.forEach(file => {
       const reader = new FileReader();
       reader.onload = e => {
         this.setState({
-          images: [...this.state.images, e.target.result]
+          imgPreviews: [...this.state.imgPreviews, { url: e.target.result }]
         });
       };
 
@@ -99,11 +99,13 @@ export default class Images extends React.Component {
   };
 
   _handleImageDelete = index => {
-    this.props.onRemove(index);
+    const images = this.props.images.filter((img, i) => i !== index);
+    this.props.setFieldValue("images", images);
+
     this.setState({
-      images: [
-        ...this.state.images.slice(0, index),
-        ...this.state.images.slice(index + 1)
+      imgPreviews: [
+        ...this.state.imgPreviews.slice(0, index),
+        ...this.state.imgPreviews.slice(index + 1)
       ]
     });
   };
