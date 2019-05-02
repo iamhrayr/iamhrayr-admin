@@ -1,14 +1,17 @@
 mutation addWork($input: addWorkInput!) {
   addWork(input: $input) {
     id
-    # title
-    # description
-    # thumbnail
-    # tags
-    # published
-    # category {
-    #   id
-    #   name
-    # }
+    title
+    description
+    thumbnail {
+      key
+      url
+    }
+    tags
+    published
+    category {
+      id
+      name
+    }
   }
 }

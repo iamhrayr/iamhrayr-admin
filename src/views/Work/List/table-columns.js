@@ -6,6 +6,7 @@ import { Mutation } from "react-apollo";
 // mutations
 import SET_WORK_VISIBILITY from "Graphql/work/setWorkVisibility.gql";
 import DELETE_WORK from "Graphql/work/deleteWork.gql";
+import WORKS_QUERY from "Graphql/work/worksQuery.gql";
 
 export default props => [
   {
@@ -81,7 +82,18 @@ export default props => [
             icon="edit"
             onClick={() => props.history.push(`/works/edit/${row.id}`)}
           />{" "}
-          <Mutation mutation={DELETE_WORK} variables={{ id: row.id }}>
+          <Mutation
+            mutation={DELETE_WORK}
+            variables={{ id: row.id }}
+            update={(cache, { data: { deleteWork } }) => {
+              const { works } = cache.readQuery({ query: WORKS_QUERY });
+
+              cache.writeQuery({
+                query: WORKS_QUERY,
+                data: { works: works.filter(w => w.id !== deleteWork.id) }
+              });
+            }}
+          >
             {(deleteWork, { loading }) => (
               <Button
                 type="danger"

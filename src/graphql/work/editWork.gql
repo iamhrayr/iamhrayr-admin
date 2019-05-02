@@ -1,5 +1,17 @@
 mutation editWork($id: ID!, $input: addWorkInput!) {
   editWork(id: $id, input: $input) {
     id
+    title
+    description
+    thumbnail {
+      url
+      key
+    }
+    tags
+    published
+    category {
+      id
+      name
+    }
   }
 }

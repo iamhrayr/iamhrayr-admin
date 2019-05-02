@@ -16,5 +16,6 @@ query work($id: ID!) {
       id
       name
     }
+    published
   }
 }

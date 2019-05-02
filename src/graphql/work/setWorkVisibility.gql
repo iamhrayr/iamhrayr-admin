@@ -1,11 +1,13 @@
-
 mutation setWorkVisibility($id: ID!, $published: Boolean!) {
-    setWorkVisibility(id: $id, published: $published) {
-        id
-        title
-        description
-        thumbnail
-        tags
-        published
+  setWorkVisibility(id: $id, published: $published) {
+    id
+    title
+    description
+    thumbnail {
+      key
+      url
     }
+    tags
+    published
+  }
 }

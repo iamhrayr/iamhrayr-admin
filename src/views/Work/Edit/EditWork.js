@@ -6,7 +6,7 @@ import { withRouter } from "react-router";
 import EDIT_WORK from "Graphql/work/editWork.gql";
 import WORK_QUERY from "Graphql/work/workQuery.gql";
 
-import Form from "../shared/Form";
+import AddEditWorkForm from "../shared/AddEditWorkForm";
 
 export default ({ match }) => {
   const { id } = match.params;
@@ -14,9 +14,20 @@ export default ({ match }) => {
   return (
     <Query query={WORK_QUERY} variables={{ id }}>
       {({ data, loading: dataLoading, error }) => (
-        <Mutation mutation={EDIT_WORK}>
+        <Mutation
+          key={id}
+          mutation={EDIT_WORK}
+          // update={(cache, { data }) => {
+          //   // debugger;
+          //   // const { todos } = cache.readQuery({ query: GET_TODOS });
+          //   // cache.writeQuery({
+          //   //   query: GET_TODOS,
+          //   //   data: { todos: todos.concat([addTodo]) }
+          //   // });
+          // }}
+        >
           {(editWork, { loading: editWorkLoading }) => (
-            <Form
+            <AddEditWorkForm
               onSubmit={editWork}
               onSubmitLoading={editWorkLoading}
               data={data && data.work}

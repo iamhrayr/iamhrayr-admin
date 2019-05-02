@@ -1,4 +1,6 @@
 import "./configs/ReactotronConfig";
+import "@babel/polyfill";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloClient } from "apollo-client";
